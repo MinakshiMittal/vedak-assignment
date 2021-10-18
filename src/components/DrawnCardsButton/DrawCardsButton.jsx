@@ -4,20 +4,28 @@ export const DrawCardsButton = () => {
   const { cardsDeck, setDrawnCards, setCardsDeck } = useCards();
 
   const handleDrawCards = () => {
-    let size = 0;
-    let drawnCards = cardsDeck.slice(size, size + 5);
-    setDrawnCards(drawnCards);
-    let remainingCards = cardsDeck.filter((card) => {
-      for (let i = 0; i < drawnCards.length; i++) {
-        if (
-          card.value === drawnCards[i].value &&
-          card.suit === drawnCards[i].suit
-        )
+    let drawnCards = [];
+    let remainingCards = [...cardsDeck];
+
+    for (let i = 0; i < 5; i++) {
+      let drawnCard =
+        remainingCards[Math.floor(Math.random() * remainingCards.length)];
+      remainingCards = remainingCards.filter((card) => {
+        if (card.value === drawnCard.value && card.suit === drawnCard.suit)
           return false;
-      }
-      return true;
-    });
+        return true;
+      });
+      drawnCards = [...drawnCards, drawnCard];
+    }
+    setDrawnCards(drawnCards);
     setCardsDeck(remainingCards);
   };
-  return <button onClick={handleDrawCards}>Draw Cards</button>;
+  return (
+    <>
+      {cardsDeck.length >= 5 && (
+        <button onClick={handleDrawCards}>Draw Cards</button>
+      )}
+      {cardsDeck.length < 5 && <h1>Insufficient Cards Reamaining</h1>}
+    </>
+  );
 };
