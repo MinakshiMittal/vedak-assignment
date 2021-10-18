@@ -1,0 +1,21 @@
+.drawn-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 0.7rem;
+  background-color: #2cb8cb;
+  border-radius: 0.5rem;
+  color: white;
+  margin: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .drawn-cards-container {
+    flex-wrap: wrap;
+  }
+}

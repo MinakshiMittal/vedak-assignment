@@ -1,0 +1,44 @@
+.card {
+  width: 14%;
+  height: 40vh;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+  border-radius: 0.7rem;
+  padding: 0.4rem;
+  background-color: white;
+}
+
+.card-upper,
+.card-lower {
+  display: flex;
+  height: 10vh;
+}
+
+.card-lower > img,
+.card-upper > img {
+  width: 20px;
+  height: 20px;
+  margin: 0.1rem 0 0 0;
+}
+
+.card-upper {
+  align-self: flex-start;
+}
+
+.card-lower {
+  align-self: flex-end;
+}
+
+.card-middle {
+  height: 50vh;
+  align-self: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+}

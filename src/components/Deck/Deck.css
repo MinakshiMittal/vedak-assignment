@@ -1,0 +1,24 @@
+img {
+  width: 14%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.deck {
+  width: 10rem;
+  background-color: white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .deck {
+    width: 70%;
+  }
+}
