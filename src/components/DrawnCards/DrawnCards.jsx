@@ -6,14 +6,11 @@ export const DrawnCards = () => {
   const { drawnCards } = useCards();
   return (
     <>
-      {drawnCards && (
-        <div className="drawn-cards-container">
-          {drawnCards?.map((card) => {
-            return <Card value={card.value} suit={card.suit} />;
-          })}
-        </div>
-      )}
-      {drawnCards?.length === 0 && <h1>Deck Over</h1>}
+      <div className="drawn-cards-container">
+        {drawnCards?.map((card) => {
+          return <Card value={card.value} suit={card.suit} />;
+        })}
+      </div>
     </>
   );
 };

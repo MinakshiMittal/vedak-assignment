@@ -6,6 +6,7 @@ const CardsContext = createContext();
 export const CardsProvider = ({ children }) => {
   const [cardsDeck, setCardsDeck] = useState(playingCardsDeck);
   const [drawnCards, setDrawnCards] = useState();
+
   return (
     <CardsContext.Provider
       value={{ cardsDeck, setCardsDeck, drawnCards, setDrawnCards }}
