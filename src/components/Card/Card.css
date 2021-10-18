@@ -1,20 +1,31 @@
 .card {
-  width: 14%;
-  height: 40vh;
+  width: 15%;
+  height: 45vh;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 2rem;
   border-radius: 0.7rem;
   padding: 0.4rem;
   background-color: white;
+  position: relative;
+  margin-left: -17.4%;
+}
+
+.card-value {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .card-upper,
 .card-lower {
   display: flex;
-  height: 10vh;
+  flex-direction: column;
+  /* height: 10vh; */
 }
 
 .card-lower > img,
@@ -35,10 +46,12 @@
 .card-middle {
   height: 50vh;
   align-self: center;
+  width: 50%;
 }
 
 @media (max-width: 600px) {
   .card {
-    width: 80%;
+    width: 16%;
+    margin-left: -23%;
   }
 }

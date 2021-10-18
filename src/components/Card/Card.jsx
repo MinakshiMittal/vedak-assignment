@@ -8,7 +8,7 @@ export const Card = ({ value, suit }) => {
   return (
     <div className="card">
       <div className="card-upper">
-        <p>{value}</p>
+        <p className="card-value">{value}</p>
         {suit === "hearts" && (
           <img src={Hearts} alt="hearts" className="card-image" />
         )}
@@ -33,7 +33,7 @@ export const Card = ({ value, suit }) => {
         {suit === "clubs" && <img src={Clubs} alt="clubs" />}
         {suit === "spades" && <img src={Spades} alt="spades" />}
         {suit === "diamonds" && <img src={Diamonds} alt="spades" />}
-        <p>{value}</p>
+        <p className="card-value">{value}</p>
       </div>
     </div>
   );

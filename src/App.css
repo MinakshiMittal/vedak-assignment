@@ -4,8 +4,10 @@
 
 button {
   cursor: pointer;
+  margin-right: 17%;
 }
 
 body {
   background-color: #f2a28d;
+  margin-left: 17%;
 }
